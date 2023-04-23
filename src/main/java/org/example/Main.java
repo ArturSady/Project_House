@@ -22,29 +22,43 @@ package org.example;
 // W programie stwórz dom z dwoma pokojami: jeden domyślny, a drugi, większy z czterema oknami
 
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        Windows windows1 = new Windows(false);
-        Windows windows2 = new Windows(false);
-        Windows windows3 = new Windows(false);
-        Windows windows4 = new Windows(false);
-        String s = windows1.toString();
-        System.out.println(s);
-        System.out.println();
-        ArrayList<Windows> windows = new ArrayList<>();
+
+        ArrayList<Window> windows = new ArrayList<>();
+        ArrayList<Bed> beds = new ArrayList<>();
+
+        System.out.println("Windows: ");
+        Window windows1 = new Window(false);
+        Window windows2 = new Window(false);
+        Window windows3 = new Window(false);
+        Window windows4 = new Window(false);
         windows.add(windows1);
         windows.add(windows2);
         windows.add(windows3);
         windows.add(windows4);
-        for (Windows window: windows) {
+        for (Window window: windows) {
             window.isOpen();
             System.out.println(window);
 
         }
+        System.out.println();
+        System.out.println("Beds: ");
+        Bed bed1 = new Bed(2);
+        Bed bed2 = new Bed(45);
+        Bed bed3 = new Bed(65);
+        beds.add(bed1);
+        beds.add(bed2);
+        beds.add(bed3);
+        for (Bed bed : beds) {
+            System.out.println(bed);
+
+        }
+        Room room = new Room(bed1, windows);
+       // room.changeBedSheet();
+        System.out.println(room);
 
 
     }

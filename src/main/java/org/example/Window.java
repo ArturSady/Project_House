@@ -1,9 +1,9 @@
 package org.example;
 
-public class Windows {
+public class Window {
     private boolean isOpen = false;
 
-    public Windows(boolean open) {
+    public Window(boolean open) {
         this.isOpen = open;
     }
 
@@ -16,5 +16,8 @@ public class Windows {
         return "Windows{" +
                 "open=" + isOpen +
                 '}';
+    }
+
+    public Window() {
     }
 }
