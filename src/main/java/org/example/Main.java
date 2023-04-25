@@ -31,18 +31,19 @@ public class Main {
         ArrayList<Bed> beds = new ArrayList<>();
 
         System.out.println("Windows: ");
-        Window windows1 = new Window(false);
-        Window windows2 = new Window(false);
-        Window windows3 = new Window(false);
-        Window windows4 = new Window(false);
-        windows.add(windows1);
-        windows.add(windows2);
-        windows.add(windows3);
-        windows.add(windows4);
+        Window window1 = new Window(false);
+        Window window2 = new Window(false);
+        Window window3 = new Window(false);
+        Window window4 = new Window(false);
+        windows.add(window1);
+        windows.add(window2);
+        windows.add(window3);
+        windows.add(window4);
+        System.out.println(windows);
+        System.out.println();
         for (Window window: windows) {
             window.isOpen();
             System.out.println(window);
-
         }
         System.out.println();
         System.out.println("Beds: ");
@@ -56,10 +57,31 @@ public class Main {
             System.out.println(bed);
 
         }
-        Room room = new Room(bed1, windows);
-       // room.changeBedSheet();
-        System.out.println(room);
+        Room room1 = new Room(bed1, windows);
+        System.out.println(room1);
+       // room1.changeBedSheet();
+        System.out.println(room1);
+        System.out.println();
 
+
+        Room room2 = new Room();
+
+
+        System.out.println(room2);
+       // room2.cleanRoom();
+        System.out.println();
+        System.out.println(room2);
+        System.out.println();
+        //room1.cleanRoom();
+        System.out.println(room1);
+
+        ArrayList<Room> rooms = new ArrayList<>();
+        rooms.add(room1);
+        rooms.add(room2);
+        Home home = new Home(rooms);
+        System.out.println();
+
+        System.out.println(home);
 
     }
 }
